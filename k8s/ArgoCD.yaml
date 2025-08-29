@@ -1,11 +1,11 @@
-apiVersion: v1
-kind: Secret
-metadata:
-  name: argocd-image-updater-secret
-  namespace: argocd
-  labels:
-    argocd.argoproj.io/secret-type: repo-creds
-stringData:
-  url: https://github.com/rubioworo-ai
-  username: rubioworo-ai
-  password: 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
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: argocd-image-updater-secret
+#   namespace: argocd
+#   labels:
+#     argocd.argoproj.io/secret-type: repo-creds
+# stringData:
+#   url: https://github.com/rubioworo-ai
+#   username: rubioworo-ai
+#   password: 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
