@@ -4,10 +4,10 @@ metadata:
   name: my-grandel-app
   namespace: my-grandel-app
   annotations:
-    # ArgoCD Image Updater configuration
-    argocd-image-updater.argoproj.io/image-list: my-grandel-app=rukevweubio/my-grandel-app
-    argocd-image-updater.argoproj.io/my-grandel-app.update-strategy: latest
+    argocd-image-updater.argoproj.io/image-list: rukevweubio/my-grandel-app:latest
     argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/git-repo: https://github.com/rubioworo-ai/argocd-kubernates-deployment.git
 spec:
   replicas: 2
   selector:
