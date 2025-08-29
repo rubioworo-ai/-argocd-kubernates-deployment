@@ -5,4 +5,4 @@ metadata:
   namespace: argocd
 stringData:
   username: "rubioworo-ai"
-  password: "env.password"
+  password: "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"
