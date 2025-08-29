@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-grandel-app
+  namespace: default
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: rukevweubio/my-grandel-app
+    argocd-image-updater.argoproj.io/write-back-method: git
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-grandel-app
+  template:
+    metadata:
+      labels:
+        app: my-grandel-app
+  spec:
+    containers:
+      - name: my-grandel-app
+        image: rukevweubio/my-grandel-app:latest
+        ports:
+          - containerPort: 8080
